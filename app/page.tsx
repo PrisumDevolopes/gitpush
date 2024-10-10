@@ -2,7 +2,7 @@
 
 import React, { useEffect, useState } from 'react'
 import { motion, useMotionValue, useSpring, useScroll } from 'framer-motion'
-import { FaGithub, FaTwitter, FaEnvelope, FaPhone, FaMapMarkerAlt } from 'react-icons/fa'
+import { FaGithub, FaTwitter } from 'react-icons/fa'
 import Image from 'next/image'
 
 export default function Component() {
@@ -43,7 +43,7 @@ export default function Component() {
   const tabContent = {
     'what-i-do': 'I specialize in building robust and scalable web applications using modern technologies. My expertise includes front-end development with React, back-end development with Node.js, and database management with MongoDB and PostgreSQL. I also have experience with cloud services like AWS and containerization with Docker.',
     'projects': 'My portfolio includes a diverse range of projects, from full-stack web applications to mobile apps and AI-powered tools. Check out my Projects section to see detailed case studies of my work, including technologies used and challenges overcome.',
-    'hire-me': "I&apos;m available for freelance work and open to full-time opportunities. Whether you need a custom web application, a mobile app, or technical consultation, I&apos;m here to help bring your ideas to life. Let&apos;s discuss how we can work together to achieve your goals."
+    'hire-me': "I'm available for freelance work and open to full-time opportunities. Whether you need a custom web application, a mobile app, or technical consultation, I'm here to help bring your ideas to life. Let's discuss how we can work together to achieve your goals."
   }
 
   const fadeInUp = {
@@ -56,7 +56,7 @@ export default function Component() {
     setIsSubmitting(true)
     // Simulate form submission
     await new Promise(resolve => setTimeout(resolve, 2000))
-    setSubmitMessage("Thank you for your message. I&apos;ll get back to you soon!")
+    setSubmitMessage("Thank you for your message. I'll get back to you soon!")
     setFormState({ name: '', email: '', message: '' })
     setIsSubmitting(false)
   }
@@ -165,7 +165,7 @@ export default function Component() {
                     transition={{ duration: 0.8 }}
                     viewport={{ once: true }}
                   >
-                    <Image src="/placeholder.svg?height=400&width=400" alt="Prisum" width={400} height={400} className="rounded-lg shadow-lg mb-6" />
+                    <Image src="/placeholder.svg" alt="Prisum" width={400} height={400} className="rounded-lg shadow-lg mb-6" />
                     <div className="flex space-x-4 justify-center">
                       <motion.a href="#" className="text-blue-400 hover:text-blue-300 transition-colors" whileHover={{ scale: 1.2 }}><FaGithub size={24} /></motion.a>
                       <motion.a href="#" className="text-blue-400 hover:text-blue-300 transition-colors" whileHover={{ scale: 1.2 }}><FaTwitter size={24} /></motion.a>
@@ -230,9 +230,9 @@ export default function Component() {
                 </motion.h2>
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                   {[
-                    { title: "EcoTrack", description: "A sustainability app that helps users reduce their carbon footprint through personalized recommendations and community challenges.", image: "/placeholder.svg?height=200&width=400", tags: ["React Native", "Node.js", "MongoDB"] },
-                    { title: "CodeCollab", description: "Real-time collaborative coding platform with integrated video chat and version control, designed for remote pair programming.", image: "/placeholder.svg?height=200&width=400", tags: ["React", "Socket.io", "WebRTC"] },
-                    { title: "AI Content Assistant", description: "An AI-powered tool that helps content creators generate ideas, outlines, and drafts for articles and social media posts.", image: "/placeholder.svg?height=200&width=400", tags: ["Python", "Flask", "OpenAI API"] }
+                    { title: "EcoTrack", description: "A sustainability app that helps users reduce their carbon footprint through personalized recommendations and community challenges.", image: "/placeholder.svg", tags: ["React Native", "Node.js", "MongoDB"] },
+                    { title: "CodeCollab", description: "Real-time collaborative coding platform with integrated video chat and version control, designed for remote pair programming.", image: "/placeholder.svg", tags: ["React", "Socket.io", "WebRTC"] },
+                    { title: "AI Content Assistant", description: "An AI-powered tool that helps content creators generate ideas, outlines, and drafts for articles and social media posts.", image: "/placeholder.svg", tags: ["Python", "Flask", "OpenAI API"] }
                   ].map((project, index) => (
                     <motion.div
                       key={index}
@@ -255,7 +255,6 @@ export default function Component() {
                         </div>
                         <motion.a 
                           href="#" 
-                
                           className="text-blue-400 hover:underline"
                           whileHover={{ scale: 1.05 }}
                           whileTap={{ scale: 0.95 }}
@@ -270,6 +269,7 @@ export default function Component() {
 
               {/* Blog Section */}
               <section id="blog" className="py-16">
+                
                 <motion.h2 
                   className="text-4xl font-bold mb-8"
                   initial={{ opacity: 0, x: -50 }}
@@ -339,15 +339,15 @@ export default function Component() {
                     </p>
                     <div className="space-y-4 mb-8">
                       <div className="flex items-center">
-                        <FaEnvelope className="w-6 h-6 mr-2 text-blue-400" />
+                        <span className="w-6 h-6 mr-2 text-blue-400">📧</span>
                         <span>prisum@example.com</span>
                       </div>
                       <div className="flex items-center">
-                        <FaPhone className="w-6 h-6 mr-2 text-blue-400" />
+                        <span className="w-6 h-6 mr-2 text-blue-400">📞</span>
                         <span>+1 (555) 123-4567</span>
                       </div>
                       <div className="flex items-center">
-                        <FaMapMarkerAlt className="w-6 h-6 mr-2 text-blue-400" />
+                        <span className="w-6 h-6 mr-2 text-blue-400">📍</span>
                         <span>San Francisco, CA</span>
                       </div>
                     </div>
