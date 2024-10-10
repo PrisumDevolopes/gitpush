@@ -10,15 +10,11 @@ export default function Component() {
   const cursorX = useMotionValue(-100)
   const cursorY = useMotionValue(-100)
   const springConfig = { damping: 25, stiffness: 700 }
-  const cursorXSpring = useSpring(cursorX, springConfig)
-  const cursorYSpring = useSpring(cursorY, springConfig)
 
   const [activeTab, setActiveTab] = useState('what-i-do')
   const [formState, setFormState] = useState({ name: '', email: '', message: '' })
   const [isSubmitting, setIsSubmitting] = useState(false)
   const [submitMessage, setSubmitMessage] = useState('')
-
-  const { scrollYProgress } = useScroll()
 
   useEffect(() => {
     const moveCursor = (e: MouseEvent) => {
@@ -43,7 +39,7 @@ export default function Component() {
   const tabContent = {
     'what-i-do': 'I specialize in building robust and scalable web applications using modern technologies. My expertise includes front-end development with React, back-end development with Node.js, and database management with MongoDB and PostgreSQL. I also have experience with cloud services like AWS and containerization with Docker.',
     'projects': 'My portfolio includes a diverse range of projects, from full-stack web applications to mobile apps and AI-powered tools. Check out my Projects section to see detailed case studies of my work, including technologies used and challenges overcome.',
-    'hire-me': "I'm available for freelance work and open to full-time opportunities. Whether you need a custom web application, a mobile app, or technical consultation, I'm here to help bring your ideas to life. Let's discuss how we can work together to achieve your goals."
+    'hire-me': "I&apos;m available for freelance work and open to full-time opportunities. Whether you need a custom web application, a mobile app, or technical consultation, I&apos;m here to help bring your ideas to life. Let&apos;s discuss how we can work together to achieve your goals."
   }
 
   const fadeInUp = {
@@ -56,7 +52,7 @@ export default function Component() {
     setIsSubmitting(true)
     // Simulate form submission
     await new Promise(resolve => setTimeout(resolve, 2000))
-    setSubmitMessage("Thank you for your message. I'll get back to you soon!")
+    setSubmitMessage("Thank you for your message. I&apos;ll get back to you soon!")
     setFormState({ name: '', email: '', message: '' })
     setIsSubmitting(false)
   }
@@ -269,7 +265,6 @@ export default function Component() {
 
               {/* Blog Section */}
               <section id="blog" className="py-16">
-                
                 <motion.h2 
                   className="text-4xl font-bold mb-8"
                   initial={{ opacity: 0, x: -50 }}
@@ -281,6 +276,7 @@ export default function Component() {
                 </motion.h2>
                 <div className="space-y-8">
                   {[
+                    
                     { title: "The Future of Web Development: Trends to Watch in 2023", date: "July 15, 2023", excerpt: "Explore emerging technologies and methodologies that are shaping the future of web development...", tags: ["Web Development", "Trends"] },
                     { title: "Optimizing React Applications for Performance", date: "July 1, 2023", excerpt: "Learn advanced techniques to boost the performance of your React applications...", tags: ["React", "Performance"] },
                     { title: "Introduction to Serverless Architecture", date: "June 15, 2023", excerpt: "Discover the benefits and use cases of serverless architecture in modern application development...", tags: ["Serverless", "Cloud Computing"] }
@@ -425,8 +421,8 @@ export default function Component() {
           <motion.div
             className="fixed top-0 left-0 w-4 h-4 rounded-full bg-white mix-blend-difference pointer-events-none z-50"
             style={{
-              x: cursorXSpring,
-              y: cursorYSpring,
+              x: cursorX,
+              y: cursorY,
             }}
           />
         </>
