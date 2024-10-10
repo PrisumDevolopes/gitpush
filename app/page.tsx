@@ -39,7 +39,7 @@ export default function Component() {
   const tabContent = {
     'what-i-do': 'I specialize in building robust and scalable web applications using modern technologies. My expertise includes front-end development with React, back-end development with Node.js, and database management with MongoDB and PostgreSQL. I also have experience with cloud services like AWS and containerization with Docker.',
     'projects': 'My portfolio includes a diverse range of projects, from full-stack web applications to mobile apps and AI-powered tools. Check out my Projects section to see detailed case studies of my work, including technologies used and challenges overcome.',
-    'hire-me': "I&apos;m available for freelance work and open to full-time opportunities. Whether you need a custom web application, a mobile app, or technical consultation, I&apos;m here to help bring your ideas to life. Let&apos;s discuss how we can work together to achieve your goals."
+    'hire-me': "I'm available for freelance work and open to full-time opportunities. Whether you need a custom web application, a mobile app, or technical consultation, I'm here to help bring your ideas to life. Let's discuss how we can work together to achieve your goals."
   }
 
   const fadeInUp = {
@@ -52,7 +52,7 @@ export default function Component() {
     setIsSubmitting(true)
     // Simulate form submission
     await new Promise(resolve => setTimeout(resolve, 2000))
-    setSubmitMessage("Thank you for your message. I&apos;ll get back to you soon!")
+    setSubmitMessage("Thank you for your message. I'll get back to you soon!")
     setFormState({ name: '', email: '', message: '' })
     setIsSubmitting(false)
   }
@@ -105,7 +105,7 @@ export default function Component() {
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.8, delay: 0.2 }}
                   >
-                    Hi, I&apos;m <span className="bg-gradient-to-r from-blue-400 to-purple-500 text-transparent bg-clip-text">Prisum</span>
+                    Hi, I'm <span className="bg-gradient-to-r from-blue-400 to-purple-500 text-transparent bg-clip-text">Prisum</span>
                   </motion.h1>
                   <motion.p 
                     className="text-xl mb-8 max-w-2xl"
@@ -175,7 +175,7 @@ export default function Component() {
                       transition={{ duration: 0.8 }}
                       viewport={{ once: true }}
                     >
-                      Hi, I&apos;m Prisum, a passionate full-stack developer with over 5 years of experience in creating web and mobile applications. I specialize in React, Node.js, and cloud technologies, with a keen interest in AI and machine learning applications in web development.
+                      Hi, I'm Prisum, a passionate full-stack developer with over 5 years of experience in creating web and mobile applications. I specialize in React, Node.js, and cloud technologies, with a keen interest in AI and machine learning applications in web development.
                     </motion.p>
                     <motion.p 
                       className="text-lg mb-6"
@@ -184,7 +184,7 @@ export default function Component() {
                       transition={{ duration: 0.8, delay: 0.2 }}
                       viewport={{ once: true }}
                     >
-                      My journey in tech started when I built my first website at the age of 15. Since then, I&apos;ve been constantly learning and exploring new technologies to improve my skills and create better solutions. I&apos;m driven by the desire to solve complex problems and create intuitive, user-friendly applications that make a positive impact.
+                      My journey in tech started when I built my first website at the age of 15. Since then, I've been constantly learning and exploring new technologies to improve my skills and create better solutions. I'm driven by the desire to solve complex problems and create intuitive, user-friendly applications that make a positive impact.
                     </motion.p>
                     <motion.h3 
                       className="text-2xl font-bold mb-4"
@@ -269,7 +269,7 @@ export default function Component() {
                   className="text-4xl font-bold mb-8"
                   initial={{ opacity: 0, x: -50 }}
                   whileInView={{ opacity: 1, x: 0 }}
-                  transition={{ duration: 0.8 }}
+                  transition={{ duration: 0.8  }}
                   viewport={{ once: true }}
                 >
                   Latest Articles
@@ -331,7 +331,7 @@ export default function Component() {
                     viewport={{ once: true }}
                   >
                     <p className="text-lg mb-6">
-                      I&apos;m always open to new opportunities, collaborations, or just a friendly chat about tech. Feel free to reach out to me using the form or through my social media channels.
+                      I'm always open to new opportunities, collaborations, or just a friendly chat about tech. Feel free to reach out to me using the form or through my social media channels.
                     </p>
                     <div className="space-y-4 mb-8">
                       <div className="flex items-center">
